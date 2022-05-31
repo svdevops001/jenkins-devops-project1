@@ -1,10 +1,10 @@
 pipeline {
 	// agent any
-	agent { docker { image 'maven:3.8.5-openjdk-8-slim'} }
+	agent { docker { image 'nginx:latest'} }
 	stages {
 		stage('Build') {
 			steps {
-				sh "mvn --version"
+				sh "nginx --version"
 				echo "Build"
 			}
 		}
